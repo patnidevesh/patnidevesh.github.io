@@ -35,6 +35,7 @@ As mentioned above events are generally referred to change in state. When you th
 
 - **Here's how WebSockets work:**
  	-
+  
 	1.WebSocket Handshake: The process begins with a standard HTTP handshake. The client sends an HTTP request to the server, including a special Upgrade header with the value "websocket." The server, if it supports WebSockets, responds with an HTTP 101 "Switching Protocols" status code, indicating the upgrade is accepted.
 
   	2.WebSocket Connection Establishment: Once the handshake is successful, the connection is "upgraded" from an HTTP connection to a WebSocket connection. The key feature here is that this connection remains open and persistent, unlike traditional HTTP connections, which are stateless and short-lived.
@@ -47,6 +48,7 @@ As mentioned above events are generally referred to change in state. When you th
 
 - **Here's how the Pub/Sub model works:**
   	-
+  
 	1.Publishers: Publishers are entities or components that generate messages or events. These messages could be notifications, updates, data changes, or any other kind of information. Publishers are responsible for sending these messages to the message broker without needing to know who or what will receive them. They "publish" messages to specific channels or topics.
 
   	2.Subscribers: Subscribers are entities or components that express an interest in receiving specific types of messages. They subscribe to one or more channels or topics. Subscribers are completely unaware of the publishers. They only receive messages that match their subscribed channels or topics.
@@ -57,6 +59,7 @@ As mentioned above events are generally referred to change in state. When you th
 
 - **Here's how event streams work:**
   	-
+  
 	1.Events: Events are discrete occurrences or updates that happen within a system. These events can represent a wide range of activities, such as user actions (e.g., clicks, sign-ins), system changes (e.g., configuration updates), or sensor data (e.g., temperature readings). Each event is typically represented as a structured piece of data.
 
   	2.Event Log: Events are appended to an event log, which is essentially a time-ordered, immutable, and append-only data structure. The event log serves as a historical record of all events that have occurred within a system. Events are appended to the log as they happen, and once an event is added, it cannot be modified or deleted.
@@ -66,8 +69,9 @@ As mentioned above events are generally referred to change in state. When you th
 - **Web Hooks** : Webhooks are a way for web applications to provide real-time data to other applications or services. They enable one application to notify another application or service about events or updates in near real-time. Webhooks are widely used for various purposes, such as triggering actions in response to events, data synchronization, and integrations between different software systems
 
 - **Here's how webhooks work:**
-	- 
-	1.Setup and Registration: To use webhooks, the receiving application or service (the webhook consumer) provides a URL endpoint where it can receive HTTP POST requests. This URL is typically provided to the sending application (the webhook provider). The webhook provider needs to know where to send data when an event occurs.
+  	-    
+
+  	1.Setup and Registration: To use webhooks, the receiving application or service (the webhook consumer) provides a URL endpoint where it can receive HTTP POST requests. This URL is typically provided to the sending application (the webhook provider). The webhook provider needs to know where to send data when an event occurs.
 	
  	2.Event Occurs: An event, such as a user signing up, a payment being made, a new comment being posted, or any other event defined by the webhook provider, occurs in the provider's system. This could be a user action, a change in data, or any other trigger.
 
